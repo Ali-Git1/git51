@@ -1,8 +1,8 @@
-﻿using BigonWebUI.Models;
-using BigonWebUI.Models.Entities;
+﻿using BigonApp.Infrastructure.Entities;
+using BigonApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BigonWebUI.Areas.Admin.Controllers
+namespace BigonApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class ColorController : Controller
@@ -28,8 +28,7 @@ namespace BigonWebUI.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Create(Color color)
         {
-            color.CreatedAt = DateTime.Now;
-            color.CreatedBy = 1;
+           
             _dbcontext.Colors.Add(color);
             _dbcontext.SaveChanges();
 
@@ -60,8 +59,7 @@ namespace BigonWebUI.Areas.Admin.Controllers
 
             dbColor.Name = color.Name;
             dbColor.HexCode = color.HexCode;
-            dbColor.ModifiedAt = DateTime.UtcNow;
-            dbColor.ModifiedBy = 2;
+            
 
             _dbcontext.SaveChanges();
 
@@ -96,18 +94,13 @@ namespace BigonWebUI.Areas.Admin.Controllers
                 });
             }
 
-
-            dbColor.DeletedAt = DateTime.UtcNow;
-            dbColor.DeletedBy = 2;
+            _dbcontext.Colors.Remove(dbColor);
 
             _dbcontext.SaveChanges();
 
+            var colors = _dbcontext.Colors.Where(c => c.DeletedBy == null).ToList();
 
-            return Ok(new
-            {
-                error=false,
-                message="Data silindi"
-            });
+            return PartialView("_Body",colors);
         }
 
 

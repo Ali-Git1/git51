@@ -1,5 +1,5 @@
-﻿@using BigonWebUI.Models.Entities
-@model List<Color>
+﻿@using BigonApp.Infrastructure.Entities
+@model IEnumerable<Color>
 
 <div class="card">
     <div class="card-header">
@@ -17,21 +17,8 @@
                         <th>Name</th>
                     </tr>
                 </thead>
-                <tbody>
-                   @foreach(var color in Model)
-                   {
-                        <tr>
-
-                            <td><span color style="background:@color.HexCode"></span> </td>
-                            <td>@color.Name</td>
-                            <td>
-                                <a asp-action="details" asp-controller="color" asp-route-id="@color.Id" class="btn btn-primary"><i class="fa-solid fa-info text-white"></i> Info</a>
-                                <a asp-action="edit" asp-controller="color" asp-route-id="@color.Id" class="btn btn-warning"><i class="fa-solid fa-warning text-white"></i> Edit</a>
-                                <a onclick="removeColor(@color.Id, '@color.Name')" class="btn btn-danger"><i class="fa-solid fa-trash text-white"></i> Remove</a>
-                            </td>
-                        </tr>
-                   }
-                   
+                <tbody id="tableBody">
+                  <partial name="_Body" model="@Model"/>
                 </tbody>
             </table>
         </div>
@@ -43,6 +30,10 @@
 @section custom_js{
     <script>
         function removeColor(id,name){
+
+            const tableBody=$("#tableBody")
+
+
             Swal.fire({
                 title: "Əminsinizmi?",
                 text: `${name} rengi silmek isteyirsinizmi!`,
@@ -64,19 +55,23 @@
                             if(!result.error)
                             {
                                 Swal.fire({
-                                    title: "Deleted!",
+                                    title: "Silindi!",
                                     text: result.message,
                                     icon: "success"
                                 });
 
-                                setTimeout(()=> {
-                                    location.reload();
-                                },[3000])
+                                
+
+                                tableBody.html(result);
+
+                                // setTimeout(()=> {
+                                //     location.reload();
+                                // },[3000])
 
                                 return;
                             }
                             Swal.fire({
-                                title: "Not Deleted!",
+                                title: "Silinmedi!",
                                 text: result.message,
                                 icon: "error"
                             });

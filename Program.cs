@@ -1,6 +1,8 @@
-using BigonWebUI.Helpers;
-using BigonWebUI.Helpers.Services;
-using BigonWebUI.Models;
+
+using BigonApp.Infrastructure.Commons.Concretes;
+using BigonApp.Infrastructure.Services.Abstracts;
+using BigonApp.Infrastructure.Services.Concretes;
+using BigonApp.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,6 +29,11 @@ builder.Services.Configure<EmailOptions>(cfg=>
 
 
 builder.Services.AddSingleton<IEmailService, EmailServices>();     //bu ne edir? -Addsingletonda kod ilk defe run olanda gedecek bu kod ucun instans yaradacaq , amma addscoped ve addtransient in ferqleri vra birinde her respons atanda yeni instans yaradir digerinde ise her servis ozun cagiranda
+builder.Services.AddSingleton<IDateTimeService, UtcDateTimeService>();
+builder.Services.AddScoped<IUserService, UserService>();
+
+
+
 
 var app = builder.Build();
 

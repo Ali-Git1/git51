@@ -1,9 +1,8 @@
-﻿using BigonWebUI.Models.Entities;
-using BigonWebUI.Models.Entities.Blog;
-using BigonWebUI.Models.Shop;
+﻿using BigonApp.Infrastructure.Entities;
+using Color = BigonApp.Infrastructure.Entities.Color;
 
 
-namespace BigonWebUI.ViewModel
+namespace BigonApp.ViewModel
 {
     public class ShopVM
     {

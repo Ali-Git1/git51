@@ -1,10 +1,10 @@
-﻿using BigonWebUI.Models;
-using BigonWebUI.Models.Entities.Blog;
-using BigonWebUI.ViewModel;
+﻿using BigonApp.Infrastructure.Entities;
+using BigonApp.Models;
+using BigonApp.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace BigonWebUI.Areas.Admin.Controllers
+namespace BigonApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class TagsController : Controller

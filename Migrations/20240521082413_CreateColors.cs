@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace BigonWebUI.Migrations
+namespace BigonApp.Migrations
 {
     /// <inheritdoc />
     public partial class CreateColors : Migration

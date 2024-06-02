@@ -1,6 +1,6 @@
-﻿using BigonWebUI.Models.Entities.Blog;
+﻿using BigonApp.Infrastructure.Entities;
 
-namespace BigonWebUI.ViewModel
+namespace BigonApp.ViewModel
 {
     public class BlogVM
     {

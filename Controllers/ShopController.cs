@@ -1,8 +1,8 @@
-﻿using BigonWebUI.Models;
-using BigonWebUI.ViewModel;
+﻿using BigonApp.Models;
+using BigonApp.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BigonWebUI.Controllers
+namespace BigonApp.Controllers
 {
     public class ShopController : Controller
     {

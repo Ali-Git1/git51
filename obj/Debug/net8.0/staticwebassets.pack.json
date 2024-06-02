@@ -6001,20 +6001,20 @@
       "PackagePath": "staticwebassets\\libs\\toastr.js\\toastr.min.js"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BigonWebUI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BigonApp.WebUI.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BigonWebUI.props",
-      "PackagePath": "build\\BigonWebUI.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BigonApp.WebUI.props",
+      "PackagePath": "build\\BigonApp.WebUI.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BigonWebUI.props",
-      "PackagePath": "buildMultiTargeting\\BigonWebUI.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BigonApp.WebUI.props",
+      "PackagePath": "buildMultiTargeting\\BigonApp.WebUI.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BigonWebUI.props",
-      "PackagePath": "buildTransitive\\BigonWebUI.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BigonApp.WebUI.props",
+      "PackagePath": "buildTransitive\\BigonApp.WebUI.props"
     }
   ],
   "ElementsToRemove": []

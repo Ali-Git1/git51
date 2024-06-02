@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace BigonWebUI.Controllers
+namespace BigonApp.Controllers
 {
     public class AboutUs : Controller
     {

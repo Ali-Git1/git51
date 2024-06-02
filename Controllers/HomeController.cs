@@ -1,13 +1,14 @@
-﻿using BigonWebUI.Helpers.Services;
-using BigonWebUI.Models;
-using BigonWebUI.Models.Entities;
+﻿
+using BigonApp.Infrastructure.Entities;
+using BigonApp.Infrastructure.Services.Abstracts;
+using BigonApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace BigonWebUI.Controllers
+namespace BigonApp.Controllers
 {
     public class HomeController : Controller
     {
