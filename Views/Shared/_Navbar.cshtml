@@ -16,10 +16,10 @@
                     </ul>
                     <!-- Home Version Dropdown End -->
                 </li>
-                <li><a asp-action="index" asp-controller="aboutus">about us</a></li>
-                <li><a asp-action ="index" asp-controller="contactus">contact us</a></li>
+                <li><a href="about.html">about us</a></li>
+                <li><a href="contact.html">contact us</a></li>
                 <li>
-                    <a asp-action="indexB" asp-controller="blog">
+                    <a href="blog.html">
                         blog<i class="fa fa-angle-down"></i>
                     </a>
                     <!-- Home Version Dropdown Start -->
@@ -39,12 +39,12 @@
                     <!-- Home Version Dropdown End -->
                 </li>
                 <li>
-                    <a a asp-action="index" asp-controller="Shop">
+                    <a href="shop.html">
                         shop<i class="fa fa-angle-down"></i>
                     </a>
                     <!-- Home Version Dropdown Start -->
                     <ul class="ht-dropdown dropdown-style-two">
-                        <li><a @* asp-action="index" asp-controller="Shop" *@ asp->product details</a></li>
+                        <li><a asp-action="index" asp-controller="Shop" asp->product details</a></li>
                         <li><a href="compare.html">compare</a></li>
                         <li><a href="cart.html">cart</a></li>
                         <li><a href="checkout.html">checkout</a></li>

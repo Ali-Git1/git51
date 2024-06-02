@@ -5535,12 +5535,11 @@
                  success:function(result){
                      if(result.success{
                          toastr.success( result.message,"Ugurlu")
-                         form.trigger("reset")
+                         form[0].reset();
                          return;
                      }
 
                     toastr.error(result.message, "Xeta")
-                     return;
 
                 },
                  error:function(){

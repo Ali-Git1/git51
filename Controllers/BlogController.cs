@@ -1,8 +1,8 @@
-﻿using BigonApp.Models;
-using BigonApp.ViewModel;
+﻿using BigonWebUI.Models;
+using BigonWebUI.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BigonApp.Controllers
+namespace BigonWebUI.Controllers
 {
     public class BlogController : Controller
     {
@@ -15,19 +15,13 @@ namespace BigonApp.Controllers
         public IActionResult Index()
         {
 
-            BlogVM blogVM = new BlogVM();
+            //BlogVM blogVM = new BlogVM();
 
 
-            blogVM.Tags = _datacontext.Tags.ToList();
+            //blogVM.Tags = _datacontext.Tags.ToList();
 
-            return View(blogVM);
-            
-        }
-
-
-        public IActionResult IndexB()
-        {
             return View();
+            
         }
     }
 }

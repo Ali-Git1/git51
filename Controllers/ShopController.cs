@@ -1,8 +1,8 @@
-﻿using BigonApp.Models;
-using BigonApp.ViewModel;
+﻿using BigonWebUI.Models;
+using BigonWebUI.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BigonApp.Controllers
+namespace BigonWebUI.Controllers
 {
     public class ShopController : Controller
     {
@@ -15,16 +15,13 @@ namespace BigonApp.Controllers
         public IActionResult Index()
         {
 
-            ShopVM shopVM = new ShopVM();
+            //ShopVM shopVM = new ShopVM();
 
-            shopVM.colors = [.. _datacontext.Colors.Where(x=>x.DeletedBy==null)];
 
-            return View(shopVM);
+            //shopVM.manufactures = _datacontext.Manufactures.ToList();
+
+            return View();
 
         }
-
-        
-
-        
     }
 }
